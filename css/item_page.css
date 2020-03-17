@@ -1,0 +1,310 @@
+/**
+ * Item page
+*/
+
+#back {
+    height: 65px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.back__wrapper {
+    position: relative;
+    height: 100%;
+}
+
+.back__link {
+    position: absolute;
+    top: 50%;
+    left: 3%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    -webkit-transition: left .5s;
+    -o-transition: left .5s;
+    transition: left .5s;
+}
+
+.back__link:hover {
+    color: #f14a58;
+    left: 4%;
+}
+
+.item__wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    margin: 60px 0 160px 0;
+}
+
+.item__photos,
+.item__info {
+    width: 50%;
+}
+
+.item__photos--thumbnail {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.item__picture {
+    display: block;
+    width: 100%;
+}
+
+.item__photos--thumbnail .item__picture {
+    cursor: pointer;
+}
+
+.active__picture {
+    -webkit-filter: brightness(.4);
+    filter: brightness(.4);
+}
+
+.item__info {
+    padding: 1.5rem;
+}
+
+.item__info__headline {
+    margin: 0;
+    font: 1.3em robotobold, sans-serif;
+}
+
+.item__additive__info {
+    font: 1rem "Times New Roman", serif;
+    font-style: italic;
+    line-height: 1.5rem;
+}
+
+.item__info__price {
+    font: 1.5rem robotoregular, sans-serif;
+}
+
+.item__info__size,
+.item__info__color {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: start;
+    margin: 20px 0 20px 0;
+}
+
+.size__block,
+.color__block {
+    width: 80px;
+    height: 40px;
+}
+
+.item__info__size__title,
+.item__info__color__title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    font: .9rem robotoregular, sans-serif;
+}
+
+.item__info__size__value,
+.item__info__color__value {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    cursor: pointer;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.checked__item {
+    border: 1px solid #e5e5e5;
+}
+
+.item__info__error {
+    display: none;
+    color: #f14a58;
+}
+
+.item__info__btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+}
+
+#item__btn {
+    width: 340px;
+    height: 75px;
+    margin: 20px;
+    margin-bottom: 0;
+    border: 1px solid #e5e5e5;
+    background-color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+#item__btn:hover {
+    border: 1px solid #f14a58;
+    color: #f14a58;
+}
+
+.no__item__message {
+    width: 100%;
+    text-align: center;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    .item__wrapper {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        text-align: center;
+        margin-bottom: 140px;
+    }
+
+    .item__photos {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .item__picture {
+        width: auto;
+    }
+
+    #item__photos--full {
+        width: 520px;
+        height: 350px;
+    }
+
+    #item__photos--full .item__picture {
+        width: 520px;
+        height: 350px;
+    }
+
+    .item__photos--thumbnail .item__picture {
+        width: 175px;
+        height: 115px;
+    }
+
+    .item__info {
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    .item__info__price {
+        font-size: 1.4em;
+    }
+
+    .item__photos--thumbnail {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+    }
+
+    .item__info__size, .item__info__color {
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+
+    #item__btn {
+        width: 255px;
+        margin-top: 88px;
+    }
+}
+
+@media only screen and (min-width: 375px) and (max-width: 767px) {
+
+    .tablet__hidden {
+        display: none;
+    }
+
+    .tablet__view {
+        display: block;
+    }
+
+    .item__wrapper {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        text-align: center;
+        margin: 10px 0 100px 0;
+    }
+
+    .item__photos {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+        flex-flow: column;
+        width: 100%;
+    }
+
+    .item__info {
+        width: 100%;
+        margin: 0 auto;
+        padding: 1.5rem 0 0 0;
+    }
+
+    .item__info__price {
+        font-size: 1.4em;
+    }
+
+    .item__photos--thumbnail {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+    }
+
+    .item__info__size, .item__info__color {
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+
+    #item__btn {
+        width: 255px;
+        margin-top: 88px;
+    }
+
+    .item__info__size,
+    .item__info__color {
+        justify-content: start;
+    }
+
+    .site-map__section--right__row {
+        display: none;
+    }
+}
