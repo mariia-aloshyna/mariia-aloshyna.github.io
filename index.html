@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Minimalistic e-commerce website">
+    <meta name="keywords" content="online store, online shopping, e-commerce website, clothes">
+    <meta name="author" content="Mariia Aloshyna">
+    <title>Homepage</title>
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="js/common.js" defer></script>
+    <script src="js/start.js" defer></script>
+</head>
+<body>
+<header id="header">
+    <div class="header">
+        <div class="content-wrapper">
+            <div class="header__row">
+                <h1 class="headline"><a href="index.html" class="headline__link">
+                    <span>Template</span>
+                </a></h1>
+                <div class="sign_up__wrapper clearfix">
+                    <a href="#" class="header__sign-up left">E-mail sing up</a>
+                    <div id="shopping-bag" class="left clearfix">
+                        <a href="shopping-bag.html"><img src="img/icons/ico_bag.png" alt="Bag icon"
+                                                         id="shopping-bag__icon" class="left">
+                            <span id="shopping-bag__title" class="left">Bag <span id="shopping-bag__total-price"></span>
+                                <span id="shopping-bag__total-count">(0)</span></span></a>
+                    </div>
+                </div>
+            </div>
+            <div class="header__row">
+                <nav class="header__menu">
+                    <ul class="header__menu__list">
+                        <li class="header__menu__item"><a href="#" class="header__menu__item__link">Women</a></li>
+                        <li class="header__menu__item"><a href="#" class="header__menu__item__link">Men</a></li>
+                        <li class="header__menu__item"><a href="#" class="header__menu__item__link">Handbags</a></li>
+                        <li class="header__menu__item"><a href="#" class="header__menu__item__link">Accessories</a></li>
+                        <li class="header__menu__item"><a href="#" class="header__menu__item__link">Sale</a></li>
+                        <li class="header__menu__item"><a href="#" class="header__menu__item__link">New Arrivals</a>
+                        </li>
+                        <li class="header__menu__item"><a href="#" class="header__menu__item__link">Clearance</a></li>
+                        <li class="header__menu__item"><a href="#" class="header__menu__item__link">Store Locator</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div id="header__search">
+                    <input type="text" placeholder="Style Name" class="header__search__input" id="search">
+                    <img src="img/icons/ico.png" alt="Search icon" class="header__search__image">
+                </div>
+            </div>
+        </div>
+        <div class="mobile-menu">
+            <div class="mobile-menu__line"></div>
+            <div class="mobile-menu__line"></div>
+            <div class="mobile-menu__line"></div>
+        </div>
+    </div>
+</header>
+<main id="main">
+    <section id="menu__mobile">
+        <nav class="menu__navigator">
+            <ul class="menu__list">
+                <li class="menu__item"><a href="#" class="menu__item__link">Women</a></li>
+                <li class="menu__item"><a href="#" class="menu__item__link">Men</a></li>
+                <li class="menu__item"><a href="#" class="menu__item__link">Handbags</a></li>
+                <li class="menu__item"><a href="#" class="menu__item__link">Accessories</a></li>
+                <li class="menu__item"><a href="#" class="menu__item__link">Sale</a></li>
+                <li class="menu__item"><a href="#" class="menu__item__link">New Arrivals</a></li>
+                <li class="menu__item"><a href="#" class="menu__item__link">Clearance</a></li>
+                <li class="menu__item"><a href="#" class="menu__item__link">Store Locator</a></li>
+                <li class="menu__item">
+                    <div id="header__search">
+                        <input type="text" placeholder="Style Name" class="header__search__input" id="search">
+                        <img src="img/icons/ico.png" alt="Search icon" class="header__search__image">
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </section>
+    <section id="slider">
+        <div class="promo-wrapper slider">
+            <div class="slider__wrapper">
+                <a href="catalog.html" class="slider__link">
+                    <img src="./img/slider/slide_1_2.jpg" alt="Slide image" class="slider__slide__image center">
+                </a>
+                <a href="item.html?id=1" class="slider__link">
+                    <img src="./img/slider/slide_2.jpg" alt="Slide image" class="slider__slide__image center"
+                         style="display: none">
+                </a>
+                <a href="catalog.html" class="slider__link">
+                    <img src="./img/slider/slide_3.jpg" alt="Slide image" class="slider__slide__image center"
+                         style="display: none">
+                </a>
+            </div>
+
+
+            <!--<div class="slider__text__block center">-->
+            <!--<h5 class="slider__text__headline">New collection</h5>-->
+            <!--<p class="slider__text&#45;&#45;red">black white</p>-->
+            <!--<div class="slider__text__footer">-->
+            <!--<span>Spring</span>-->
+            <!--<div class="slider__text__footer__line"></div>-->
+            <!--<span>Summer</span>-->
+            <!--</div>-->
+            <!--</div>-->
+
+            <button class="slider__arrow--left arrow">
+                <img src="./img/slider/arrow_l.png" alt="Arrow icon" class="slider__arrow__image">
+            </button>
+            <button class="slider__arrow--right arrow">
+                <img src="./img/slider/arrow_r.png" alt="Arrow icon" class="slider__arrow__image">
+            </button>
+        </div>
+    </section>
+    <section id="slider__scroll">
+        <div class="slider__scroll__wrapper center">
+            <button class="slider__scroll__dot active"></button>
+            <button class="slider__scroll__dot"></button>
+            <button class="slider__scroll__dot"></button>
+        </div>
+    </section>
+    <section id="banner">
+        <div class="promo-wrapper banners__wrapper">
+            <div class="banner__item banner--left">
+                <a href="item.html?id=1" class="banner--left__link">
+                    <img src="./img/banners/banner_l.jpg" alt="Left banner image" class="banner__image">
+                    <div class="banner__descr">
+                        <h2 class="banner__headline">Nike Red</h2>
+                        <p class="banner__additive_info">New</p>
+                    </div>
+                </a>
+            </div>
+            <div class="banner__item banner--right">
+                <a href="catalog.html" class="banner--right__link">
+                    <img src="./img/banners/banner_r.jpg" alt="Right banner image" class="banner__image">
+                    <div class="banner__descr">
+                        <h2 class="banner__headline">Caps & Hats</h2>
+                        <p class="banner__additive_info">Sale -50%</p>
+                    </div>
+                    <div class="banner__descr--tablet">
+                        <h2 class="banner__headline text__color--pink">Sale</h2>
+                        <p class="banner__additive_info text__color--gray">-70%</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+    <section id="arrivals">
+        <div class="content-wrapper arrivals__wrapper">
+            <h1 class="arrivals__headline">New Arrivals</h1>
+            <div class="arrivals__items">
+            </div>
+            <a href="catalog.html">
+                <button class="arrivals__btn">All arrivals</button>
+            </a>
+        </div>
+    </section>
+    <section id="site-map">
+        <div class="content-wrapper site-map__wrapper clearfix">
+            <div class="site-map__section--left left clearfix">
+                <nav class="site-map__section--left__quick__links left">
+                    <h3 class="site-map__section__headline">Quick Links</h3>
+                    <ul class="site-map__section--left__quick__links__list">
+                        <li class="site-map__section--left__quick__links__list__item">
+                            <a href="#" class="site-map__section--left__quick__links__list__item__ref">Store
+                                locator</a>
+                        </li>
+                        <li class="site-map__section--left__quick__links__list__item">
+                            <a href="#" class="site-map__section--left__quick__links__list__item__ref">Gift
+                                cards</a>
+                        </li>
+                        <li class="site-map__section--left__quick__links__list__item">
+                            <a href="#" class="site-map__section--left__quick__links__list__item__ref">Size
+                                guide</a>
+                        </li>
+                        <li class="site-map__section--left__quick__links__list__item">
+                            <a href="#" class="site-map__section--left__quick__links__list__item__ref">About us</a>
+                        </li>
+                        <li class="site-map__section--left__quick__links__list__item">
+                            <a href="#" class="site-map__section--left__quick__links__list__item__ref">Support</a>
+                        </li>
+                    </ul>
+                </nav>
+                <nav class="site-map__section--left__customer__care left">
+                    <h3 class="site-map__section__headline">Customer Care</h3>
+                    <ul class="site-map__section--left__quick__links__list">
+                        <li class="site-map__section--left__quick__links__list__item">
+                            <a href="#" class="site-map__section--left__quick__links__list__item__ref">Customer
+                                service</a>
+                        </li>
+                        <li class="site-map__section--left__quick__links__list__item">
+                            <a href="#" class="site-map__section--left__quick__links__list__item__ref">Track my
+                                order</a>
+                        </li>
+                        <li class="site-map__section--left__quick__links__list__item">
+                            <a href="#" class="site-map__section--left__quick__links__list__item__ref">Return
+                                policy</a>
+                        </li>
+                        <li class="site-map__section--left__quick__links__list__item">
+                            <a href="#" class="site-map__section--left__quick__links__list__item__ref">Shipping &
+                                delivery</a>
+                        </li>
+                        <li class="site-map__section--left__quick__links__list__item">
+                            <a href="#" class="site-map__section--left__quick__links__list__item__ref">Contact
+                                us</a>
+                        </li>
+                        <li class="site-map__section--left__quick__links__list__item">
+                            <a href="#" class="site-map__section--left__quick__links__list__item__ref">Careers</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="site-map__section--right__row tablet__view mobile__hidden left">
+                    <div class="site-map__section--right__questions">
+                        <h3 class="site-map__section__headline">Questions</h3>
+                        <img class="site-map__section__icon" src="./img/icons/twi_ico.png" alt="Twitter icon">
+                        <span class="site-map__section__info">Tweet us
+                                <span class="site-map__section__info--bold">@template</span></span>
+                    </div>
+                    <div class="site-map__section--right__phone">
+                        <h3 class="site-map__section__headline">Order by phone</h3>
+                        <a href="#" class="site-map__section__info">8-800-409-47-12</a>
+                    </div>
+                    <div class="site-map__section--right__soc--tablet">
+                        <a href="#">
+                            <img src="./img/icons/fb.png" alt="Facebook icon"
+                                 class="site-map__section--right__soc__image">
+                        </a>
+                        <a href="#">
+                            <img src="./img/icons/twi.png" alt="Twitter icon"
+                                 class="site-map__section--right__soc__image">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="site-map__section--right left">
+                <div class="site-map__section--right__row clearfix">
+                    <div class="site-map__section--right__questions left">
+                        <h3 class="site-map__section__headline">Questions</h3>
+                        <img class="site-map__section__icon" src="./img/icons/twi_ico.png" alt="Twitter icon">
+                        <span class="site-map__section__info">Tweet us
+                                <span class="site-map__section__info--bold">@template</span></span>
+                    </div>
+                    <div class="site-map__section--right__phone left">
+                        <h3 class="site-map__section__headline">Order by phone</h3>
+                        <a href="tel:8-800-409-47-12" class="site-map__section__info">8-800-409-47-12</a>
+                    </div>
+                </div>
+                <p class="site-map__section--right__quote">We have our own delivery service which operates in 23
+                    major European cities. Delivery time - 3-5 days.</p>
+                <div class="site-map__section--right__soc">
+                    <a href="#">
+                        <img src="./img/icons/fb.png" alt="Facebook icon"
+                             class="site-map__section--right__soc__image">
+                    </a>
+                    <a href="#">
+                        <img src="./img/icons/twi.png" alt="Twitter icon"
+                             class="site-map__section--right__soc__image">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="site-map--mobile">
+        <div class="content-wrapper site-map__down">
+            <div class="site-map__down__questions">
+                <h3 class="site-map__section__headline">Questions</h3>
+                <img class="site-map__section__icon" src="./img/icons/twi_ico.png" alt="Twitter icon">
+                <span class="site-map__section__info">Tweet us
+                                <span class="site-map__section__info--bold">@template</span></span>
+            </div>
+            <div class="site-map__down__phone">
+                <h3 class="site-map__section__headline">Order by phone</h3>
+                <a href="tel:8-800-409-47-12" class="site-map__section__info">8-800-409-47-12</a>
+            </div>
+        </div>
+    </section>
+    <section id="soc__links--mobile">
+        <div class="content-wrapper soc__links">
+            <ul class="footer__list">
+                <li class="footer__list__item"><a href="#" class="footer__list__item__link">Legal notice</a></li>
+                <li class="footer__list__item"><a href="#" class="footer__list__item__link">Privacy policy</a></li>
+                <li class="footer__list__item"><a href="#" class="footer__list__item__link">Site map</a></li>
+            </ul>
+            <div class="site-map__section--right__soc">
+                <a href="#">
+                    <img src="./img/icons/fb.png" alt="Facebook icon"
+                         class="site-map__section--right__soc__image">
+                </a>
+                <a href="#">
+                    <img src="./img/icons/twi.png" alt="Twitter icon"
+                         class="site-map__section--right__soc__image">
+                </a>
+            </div>
+        </div>
+    </section>
+</main>
+<footer id="footer">
+    <div class="content-wrapper">
+        <div class="footer__wrapper">
+            <address>
+                <h5 class="footer__author">© 2010–2015, The Template Group inc.</h5>
+            </address>
+            <div class="footer__sharing">
+                <h4 class="footer__sharing__headline">Share</h4>
+                <div class="footer__sharing__card">
+                    <img src="./img/icons/share.png" alt="Share card" class="footer__sharing__card__image center">
+                    <span class="footer__sharing__info center">1 437</span>
+                </div>
+            </div>
+            <div class="footer__links">
+                <ul class="footer__list">
+                    <li class="footer__list__item"><a href="#" class="footer__list__item__link">Legal notice</a></li>
+                    <li class="footer__list__item"><a href="#" class="footer__list__item__link">Privacy policy</a></li>
+                    <li class="footer__list__item"><a href="#" class="footer__list__item__link">Site map</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

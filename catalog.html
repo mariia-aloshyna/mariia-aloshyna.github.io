@@ -1,0 +1,508 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Minimalistic e-commerce website">
+    <meta name="keywords" content="online store, online shopping, e-commerce website, clothes">
+    <meta name="author" content="Mariia Aloshyna">
+    <title>Catalog</title>
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/catalog.css">
+    <script src="js/libs/lodash.js" defer></script>
+    <script src="js/common.js" defer></script>
+    <script src="js/catalog.js" defer></script>
+</head>
+<body>
+<header id="header">
+    <div class="header">
+        <div class="content-wrapper">
+            <div class="header__row">
+                <h1 class="headline"><a href="index.html" class="headline__link">
+                    <span>Template</span>
+                </a></h1>
+                <div class="sign_up__wrapper clearfix">
+                    <a href="#" class="header__sign-up left">E-mail sing up</a>
+                    <div id="shopping-bag" class="left clearfix">
+                        <a href="shopping-bag.html"><img src="img/icons/ico_bag.png" alt="Bag icon"
+                                                         id="shopping-bag__icon" class="left">
+                            <span id="shopping-bag__title" class="left">Bag <span id="shopping-bag__total-price"></span>
+                                <span id="shopping-bag__total-count">(0)</span></span></a>
+                    </div>
+                </div>
+            </div>
+            <div class="header__row">
+                <nav class="header__menu">
+                    <ul class="header__menu__list">
+                        <li class="header__menu__item"><a href="#" class="header__menu__item__link">Women</a></li>
+                        <li class="header__menu__item"><a href="#" class="header__menu__item__link">Men</a></li>
+                        <li class="header__menu__item"><a href="#" class="header__menu__item__link">Handbags</a></li>
+                        <li class="header__menu__item"><a href="#" class="header__menu__item__link">Accessories</a></li>
+                        <li class="header__menu__item"><a href="#" class="header__menu__item__link">Sale</a></li>
+                        <li class="header__menu__item"><a href="#" class="header__menu__item__link">New Arrivals</a>
+                        </li>
+                        <li class="header__menu__item"><a href="#" class="header__menu__item__link">Clearance</a></li>
+                        <li class="header__menu__item"><a href="#" class="header__menu__item__link">Store Locator</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div id="header__search">
+                    <input type="text" placeholder="Style Name" class="header__search__input" id="search">
+                    <img src="img/icons/ico.png" alt="Search icon" class="header__search__image tablet__glass">
+                </div>
+            </div>
+        </div>
+        <div class="mobile-menu">
+            <div class="mobile-menu__line"></div>
+            <div class="mobile-menu__line"></div>
+            <div class="mobile-menu__line"></div>
+        </div>
+    </div>
+</header>
+<section id="filter">
+    <div class="content-wrapper">
+        <div class="filter__wrapper">
+            <ul id="filter__list">
+                <li class="filter__button">
+                    <div class="filter__button__text">
+                        <h3 class="filter__button__title">Fashion</h3>
+                        <p class="filter__button__elem"></p>
+                    </div>
+                    <img src="./img/icons/filter_arrow.png" alt="Arrow icon" class="filter__button__icon">
+                    <ul class="filter__list__dropdown">
+                        <li class="filter__button__dropdown ">Not selected</li>
+                        <li class="filter__button__dropdown">Nail the 90s</li>
+                        <li class="filter__button__dropdown">Casual style</li>
+                        <li class="filter__button__dropdown">New Look</li>
+                        <li class="filter__button__dropdown">Sport</li>
+                        <li class="filter__button__dropdown">Vintage</li>
+                        <li class="filter__button__dropdown">Classical style</li>
+                    </ul>
+                </li>
+                <li class="filter__button">
+                    <div class="filter__button__text">
+                        <h3 class="filter__button__title">Product type</h3>
+                        <p class="filter__button__elem"></p>
+                    </div>
+                    <img src="./img/icons/filter_arrow.png" alt="Arrow icon" class="filter__button__icon">
+                    <ul class="filter__list__dropdown">
+                        <li class="filter__button__dropdown">Not selected</li>
+                        <li class="filter__button__dropdown">Coats & Jackets</li>
+                        <li class="filter__button__dropdown">Dresses</li>
+                        <li class="filter__button__dropdown">Jersey Tops</li>
+                    </ul>
+                </li>
+                <li class="filter__button">
+                    <div class="filter__button__text">
+                        <h3 class="filter__button__title">Color</h3>
+                        <p class="filter__button__elem"></p>
+                    </div>
+                    <img src="./img/icons/filter_arrow.png" alt="Arrow icon" class="filter__button__icon">
+                    <ul class="filter__list__dropdown">
+                        <li class="filter__button__dropdown">Not selected</li>
+                        <li class="filter__button__dropdown">Black</li>
+                        <li class="filter__button__dropdown">Blue</li>
+                        <li class="filter__button__dropdown">Red</li>
+                        <li class="filter__button__dropdown">Green</li>
+                        <li class="filter__button__dropdown">Golden</li>
+                    </ul>
+                </li>
+                <li class="filter__button">
+                    <div class="filter__button__text">
+                        <h3 class="filter__button__title">Brand</h3>
+                        <p class="filter__button__elem"></p>
+                    </div>
+                    <img src="./img/icons/filter_arrow.png" alt="Arrow icon" class="filter__button__icon">
+                    <ul class="filter__list__dropdown">
+                        <li class="filter__button__dropdown">Not selected</li>
+                        <li class="filter__button__dropdown">Chi Chi London</li>
+                        <li class="filter__button__dropdown">Antipodium</li>
+                        <li class="filter__button__dropdown">Adidas</li>
+                        <li class="filter__button__dropdown">New Balance</li>
+                        <li class="filter__button__dropdown">River Island</li>
+                    </ul>
+                </li>
+                <li class="filter__button">
+                    <div class="filter__button__text">
+                        <h3 class="filter__button__title">Size</h3>
+                        <p class="filter__button__elem"></p>
+                    </div>
+                    <img src="./img/icons/filter_arrow.png" alt="Arrow icon" class="filter__button__icon">
+                    <ul class="filter__list__dropdown">
+                        <li class="filter__button__dropdown">Not selected</li>
+                        <li class="filter__button__dropdown">UK 2</li>
+                        <li class="filter__button__dropdown">UK 18</li>
+                        <li class="filter__button__dropdown">UK 18L</li>
+                        <li class="filter__button__dropdown">UK 20</li>
+                        <li class="filter__button__dropdown">UK 20L</li>
+                        <li class="filter__button__dropdown">UK 20S</li>
+                        <li class="filter__button__dropdown">UK 22S</li>
+                        <li class="filter__button__dropdown">UK 22</li>
+                    </ul>
+                </li>
+                <li class="filter__button">
+                    <div class="filter__button__text">
+                        <h3 class="filter__button__title">Price rang</h3>
+                        <p class="filter__button__elem"></p>
+                    </div>
+                    <img src="./img/icons/filter_arrow.png" alt="Arrow icon" class="filter__button__icon">
+                    <ul class="filter__list__dropdown">
+                        <li class="filter__button__dropdown">Not selected</li>
+                        <li class="filter__button__dropdown">To £99</li>
+                        <li class="filter__button__dropdown">£100-£299</li>
+                        <li class="filter__button__dropdown">From £300</li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="filter--tablet">
+                <li class="filter__button--tablet">
+                    <h3 class="filter__button__title">Fashion<span class="coma">,</span></h3>
+                </li>
+                <li class="filter__button--tablet">
+                    <h3 class="filter__button__title">Product type<span class="coma">,</span></h3>
+                </li>
+                <li class="filter__button--tablet">
+                    <h3 class="filter__button__title">Color<span class="coma">,</span></h3>
+                </li>
+                <li class="filter__button--tablet">
+                    <h3 class="filter__button__title">Brand<span class="coma">,</span></h3>
+                </li>
+                <li class="filter__button--tablet">
+                    <h3 class="filter__button__title">Size<span class="coma">,</span></h3>
+                </li>
+                <li class="filter__button--tablet">
+                    <h3 class="filter__button__title">Price rang</h3>
+                    <img src="./img/icons/filter_arrow.png" alt="Arrow icon" class="filter__button__icon">
+                </li>
+                <img src="./img/icons/ico_close.png" alt="Close icon" class="close__icon">
+            </ul>
+        </div>
+    </div>
+    <div class="filter__arrow">
+        <img src="./img/icons/filter_arrow.png" alt="Arrow icon" class="filter__icon">
+    </div>
+</section>
+<section id="category--tablet" class="tablet__hidden">
+    <div class="content-wrapper category--tablet">
+        <div class="category__list">
+            <div>
+                <h3 class="category__title">Fashion</h3>
+                <p class="filter__button__elem"></p>
+            </div>
+            <ul class="category__item__list">
+                <li class="category__item">Not selected</li>
+                <li class="category__item">Nail the 90s</li>
+                <li class="category__item">Casual style</li>
+                <li class="category__item">New look</li>
+                <li class="category__item">Sport</li>
+                <li class="category__item">Vintage</li>
+                <li class="category__item">Classical style</li>
+            </ul>
+        </div>
+        <div class="category__list">
+            <div>
+                <h3 class="category__title">Product type</h3>
+                <p class="filter__button__elem"></p>
+            </div>
+            <ul class="category__item__list">
+                <li class="category__item">Not selected</li>
+                <li class="category__item">Coats & Jackets</li>
+                <li class="category__item">Dresses</li>
+                <li class="category__item">Jersey Tops</li>
+            </ul>
+        </div>
+        <div class="category__list">
+            <div>
+                <h3 class="category__title">Color</h3>
+                <p class="filter__button__elem"></p>
+            </div>
+            <ul class="category__item__list">
+                <li class="category__item">Not selected</li>
+                <li class="category__item">Black</li>
+                <li class="category__item">Blue</li>
+                <li class="category__item">Red</li>
+                <li class="category__item">Green</li>
+                <li class="category__item">Golden</li>
+            </ul>
+        </div>
+        <div class="category__list">
+            <div>
+                <h3 class="category__title">Brand</h3>
+                <p class="filter__button__elem"></p>
+            </div>
+            <ul class="category__item__list">
+                <li class="category__item">Not selected</li>
+                <li class="category__item">Chi Chi London</li>
+                <li class="category__item">Antipodium</li>
+                <li class="category__item">Adidas</li>
+                <li class="category__item">New Balance</li>
+                <li class="category__item">River Island</li>
+            </ul>
+        </div>
+        <div class="category__list">
+            <div>
+                <h3 class="category__title">Size</h3>
+                <p class="filter__button__elem"></p>
+            </div>
+            <ul class="category__item__list">
+                <li class="category__item">Not selected</li>
+                <li class="category__item">UK 2</li>
+                <li class="category__item">UK 18</li>
+                <li class="category__item">UK 18L</li>
+                <li class="category__item">UK 20</li>
+                <li class="category__item">UK 20L</li>
+                <li class="category__item">UK 20S</li>
+                <li class="category__item">UK 22S</li>
+                <li class="category__item">UK 22</li>
+            </ul>
+        </div>
+        <div class="category__list">
+            <div>
+                <h3 class="category__title">Price range</h3>
+                <p class="filter__button__elem"></p>
+            </div>
+            <ul class="category__item__list">
+                <li class="category__item">Not selected</li>
+                <li class="category__item">To £99</li>
+                <li class="category__item">£100-£299</li>
+                <li class="category__item">From £300</li>
+            </ul>
+        </div>
+    </div>
+</section>
+<main>
+    <section id="menu__mobile">
+        <nav class="menu__navigator">
+            <ul class="menu__list">
+                <li class="menu__item"><a href="#" class="menu__item__link">Women</a></li>
+                <li class="menu__item"><a href="#" class="menu__item__link">Men</a></li>
+                <li class="menu__item"><a href="#" class="menu__item__link">Handbags</a></li>
+                <li class="menu__item"><a href="#" class="menu__item__link">Accessories</a></li>
+                <li class="menu__item"><a href="#" class="menu__item__link">Sale</a></li>
+                <li class="menu__item"><a href="#" class="menu__item__link">New Arrivals</a></li>
+                <li class="menu__item"><a href="#" class="menu__item__link">Clearance</a></li>
+                <li class="menu__item"><a href="#" class="menu__item__link">Store Locator</a></li>
+                <li class="menu__item">
+                    <div id="header__search">
+                        <input type="text" placeholder="Style Name" class="header__search__input" id="search">
+                        <img src="img/icons/ico.png" alt="Search icon" class="header__search__image">
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </section>
+    <section id="catalog">
+        <div class="content-wrapper">
+            <div id="catalog__items__wrapper--top" class="catalog catalog__items__wrapper">
+            </div>
+            <aside class="catalog__additive__info">
+                <h2 class="catalog__additive__info__caption">Last weekend
+                    <span class="text__color--pink"> extra 50%</span> off on all reduced boots
+                    and shoulder bags</h2>
+                <p class="catalog__additive__info__text">This offer is valid in-store and online.
+                    Prices displayed reflect this additional discount. This offer ends at 11:59 GMT on March 1st 2015
+                </p>
+            </aside>
+            <div class="catalog">
+                <div id="catalog__items__wrapper--bottom" class="catalog__items__wrapper">
+                </div>
+                <button class="catalog__btn">Show more</button>
+            </div>
+        </div>
+    </section>
+    <section id="banner">
+        <div class="promo-wrapper banners__wrapper">
+            <div class="banner__item banner--left">
+                <img src="./img/banners/catalog_banner_l.jpg" alt="Image of banner item" class="banner__image">
+                <div class="banner__descr">
+                    <h2 class="banner__headline">Adidas Blue</h2>
+                    <p class="banner__additive_info">For men</p>
+                </div>
+            </div>
+            <div class="banner__item banner--right">
+                <div class="banner--right__part">
+                    <img src="./img/banners/catalog_banner_r_1.jpg" alt="Image of banner item"
+                         class="banner__image">
+                    <div class="banner__descr">
+                        <h2 class="banner__headline">Repair Patches</h2>
+                        <p class="banner__additive_info--price">£ 150.50</p>
+                    </div>
+                </div>
+                <div class="banner--right__part">
+                    <img src="./img/banners/catalog_banner_r_2.jpg" alt="Image of banner item"
+                         class="banner__image">
+                    <div class="banner__descr">
+                        <h2 class="banner__headline text__color--pink">Sale</h2>
+                        <p class="banner__additive_info text__color--gray">-70%</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="site-map">
+        <div class="content-wrapper site-map__wrapper clearfix">
+            <div class="site-map__section--left left clearfix">
+                <nav class="site-map__section--left__quick__links left">
+                    <h3 class="site-map__section__headline">Quick Links</h3>
+                    <ul class="site-map__section--left__quick__links__list">
+                        <li class="site-map__section--left__quick__links__list__item">
+                            <a href="#" class="site-map__section--left__quick__links__list__item__ref">Store
+                                locator</a>
+                        </li>
+                        <li class="site-map__section--left__quick__links__list__item">
+                            <a href="#" class="site-map__section--left__quick__links__list__item__ref">Gift
+                                cards</a>
+                        </li>
+                        <li class="site-map__section--left__quick__links__list__item">
+                            <a href="#" class="site-map__section--left__quick__links__list__item__ref">Size
+                                guide</a>
+                        </li>
+                        <li class="site-map__section--left__quick__links__list__item">
+                            <a href="#" class="site-map__section--left__quick__links__list__item__ref">About us</a>
+                        </li>
+                        <li class="site-map__section--left__quick__links__list__item">
+                            <a href="#" class="site-map__section--left__quick__links__list__item__ref">Support</a>
+                        </li>
+                    </ul>
+                </nav>
+                <nav class="site-map__section--left__customer__care left">
+                    <h3 class="site-map__section__headline">Customer Care</h3>
+                    <ul class="site-map__section--left__quick__links__list">
+                        <li class="site-map__section--left__quick__links__list__item">
+                            <a href="#" class="site-map__section--left__quick__links__list__item__ref">Customer
+                                service</a>
+                        </li>
+                        <li class="site-map__section--left__quick__links__list__item">
+                            <a href="#" class="site-map__section--left__quick__links__list__item__ref">Track my
+                                order</a>
+                        </li>
+                        <li class="site-map__section--left__quick__links__list__item">
+                            <a href="#" class="site-map__section--left__quick__links__list__item__ref">Return
+                                policy</a>
+                        </li>
+                        <li class="site-map__section--left__quick__links__list__item">
+                            <a href="#" class="site-map__section--left__quick__links__list__item__ref">Shipping &
+                                delivery</a>
+                        </li>
+                        <li class="site-map__section--left__quick__links__list__item">
+                            <a href="#" class="site-map__section--left__quick__links__list__item__ref">Contact
+                                us</a>
+                        </li>
+                        <li class="site-map__section--left__quick__links__list__item">
+                            <a href="#" class="site-map__section--left__quick__links__list__item__ref">Careers</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="site-map__section--right__row tablet__view mobile__hidden  left">
+                    <div class="site-map__section--right__questions">
+                        <h3 class="site-map__section__headline">Questions</h3>
+                        <img class="site-map__section__icon" src="./img/icons/twi_ico.png" alt="Twitter icon">
+                        <span class="site-map__section__info">Tweet us
+                                <span class="site-map__section__info--bold">@template</span></span>
+                    </div>
+                    <div class="site-map__section--right__phone">
+                        <h3 class="site-map__section__headline">Order by phone</h3>
+                        <a href="#" class="site-map__section__info">8-800-409-47-12</a>
+                    </div>
+                    <div class="site-map__section--right__soc--tablet">
+                        <a href="#">
+                            <img src="./img/icons/fb.png" alt="Facebook icon"
+                                 class="site-map__section--right__soc__image">
+                        </a>
+                        <a href="#">
+                            <img src="./img/icons/twi.png" alt="Twitter icon"
+                                 class="site-map__section--right__soc__image">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="site-map__section--right left">
+                <div class="site-map__section--right__row clearfix">
+                    <div class="site-map__section--right__questions left">
+                        <h3 class="site-map__section__headline">Questions</h3>
+                        <img class="site-map__section__icon" src="./img/icons/twi_ico.png" alt="Twitter icon">
+                        <span class="site-map__section__info">Tweet us
+                                <span class="site-map__section__info--bold">@template</span></span>
+                    </div>
+                    <div class="site-map__section--right__phone left">
+                        <h3 class="site-map__section__headline">Order by phone</h3>
+                        <a href="tel:8-800-409-47-12" class="site-map__section__info">8-800-409-47-12</a>
+                    </div>
+                </div>
+                <p class="site-map__section--right__quote">We have our own delivery service which operates in 23
+                    major European cities. Delivery time - 3-5 days.</p>
+                <div class="site-map__section--right__soc">
+                    <a href="#">
+                        <img src="./img/icons/fb.png" alt="Facebook icon"
+                             class="site-map__section--right__soc__image">
+                    </a>
+                    <a href="#">
+                        <img src="./img/icons/twi.png" alt="Twitter icon"
+                             class="site-map__section--right__soc__image">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="site-map--mobile">
+        <div class="content-wrapper site-map__down">
+            <div class="site-map__down__questions">
+                <h3 class="site-map__section__headline">Questions</h3>
+                <img class="site-map__section__icon" src="./img/icons/twi_ico.png" alt="Twitter icon">
+                <span class="site-map__section__info">Tweet us
+                                <span class="site-map__section__info--bold">@template</span></span>
+            </div>
+            <div class="site-map__down__phone">
+                <h3 class="site-map__section__headline">Order by phone</h3>
+                <a href="tel:8-800-409-47-12" class="site-map__section__info">8-800-409-47-12</a>
+            </div>
+        </div>
+    </section>
+    <section id="soc__links--mobile">
+        <div class="content-wrapper soc__links">
+            <ul class="footer__list">
+                <li class="footer__list__item"><a href="#" class="footer__list__item__link">Legal notice</a></li>
+                <li class="footer__list__item"><a href="#" class="footer__list__item__link">Privacy policy</a></li>
+                <li class="footer__list__item"><a href="#" class="footer__list__item__link">Site map</a></li>
+            </ul>
+            <div class="site-map__section--right__soc">
+                <a href="#">
+                    <img src="./img/icons/fb.png" alt="Facebook icon"
+                         class="site-map__section--right__soc__image">
+                </a>
+                <a href="#">
+                    <img src="./img/icons/twi.png" alt="Twitter icon"
+                         class="site-map__section--right__soc__image">
+                </a>
+            </div>
+        </div>
+    </section>
+</main>
+<footer id="footer">
+    <div class="content-wrapper">
+        <div class="footer__wrapper">
+            <address>
+                <h5 class="footer__author">© 2010–2015, The Template Group inc.</h5>
+            </address>
+            <div class="footer__sharing">
+                <h4 class="footer__sharing__headline">Share</h4>
+                <div class="footer__sharing__card">
+                    <img src="./img/icons/share.png" alt="Share card" class="footer__sharing__card__image center">
+                    <span class="footer__sharing__info center">1 437</span>
+                </div>
+            </div>
+            <div class="footer__links">
+                <ul class="footer__list">
+                    <li class="footer__list__item"><a href="#" class="footer__list__item__link">Legal notice</a></li>
+                    <li class="footer__list__item"><a href="#" class="footer__list__item__link">Privacy policy</a></li>
+                    <li class="footer__list__item"><a href="#" class="footer__list__item__link">Site map</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
